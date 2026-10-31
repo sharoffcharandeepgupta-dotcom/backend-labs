@@ -122,7 +122,7 @@ Screenshots of the working application are stored in the `screenshots/` director
 
 ### 2. About Route
 
-![About Route](./Screenshots/about.png.png)
+![About Route](./Screenshots/about.png)
 
 ### 3. Time Route
 
