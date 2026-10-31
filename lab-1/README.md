@@ -9,8 +9,8 @@
 
 | Field               | Details           |
 | ------------------- | ----------------- |
-| Name                | Shanmuk Shahith   |
-| Registration Number | 252U1R9137        |
+| Name                | Charandeep Gupta   |
+| Registration Number | 252U1R9146        |
 | Section             | CSE - GEN-AI - 2C |
 
 ## Live Deployment
@@ -118,19 +118,19 @@ Screenshots of the working application are stored in the `screenshots/` director
 
 ### 1. Home Route
 
-![Home Route](./screenshots/home.png)
+![Home Route](./screenshots/home.png.png)
 
 ### 2. About Route
 
-![About Route](./screenshots/about.png)
+![About Route](./screenshots/about.png.png)
 
 ### 3. Time Route
 
-![Time Route](./screenshots/time.png)
+![Time Route](./screenshots/time.png.png)
 
 ### 4. Unknown Route — 404 Not Found
 
-![404 Route](./screenshots/not-found.png)
+![404 Route](./screenshots/not-found.png.png)
 
 ## Problems Faced and Solutions
 
