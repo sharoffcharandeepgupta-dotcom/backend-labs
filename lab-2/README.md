@@ -13,8 +13,8 @@
 
 | Field               | Details           |
 | ------------------- | ----------------- |
-| Name                | Shanmuk Shahith   |
-| Registration Number | 252U1R9137        |
+| Name                | Charandeep gupta   |
+| Registration Number | 252U1R9146        |
 | Section             | CSE - GEN-AI - 2C |
 
 ## Project Objective
