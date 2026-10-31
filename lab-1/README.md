@@ -164,4 +164,3 @@ node_modules/
 .env
 ```
 
-Do not commit the `node_modules/` directory, environment files, API keys, passwords, or other sensitive credentials to GitHub.
