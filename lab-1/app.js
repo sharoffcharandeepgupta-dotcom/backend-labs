@@ -10,7 +10,7 @@ app.get('/', (req, res) => {
 
 app.get('/about', (req, res) => {
     res.status(200).json({
-        name: 'Shanmuk Shahith',
+        name: 'Charan deep Gupta',
         section: 'CSE-GAI-2C'
     });
 });
