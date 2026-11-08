@@ -1,0 +1,86 @@
+[
+  {
+    "title": "The Hobbit",
+    "author": "J.R.R. Tolkien",
+    "price": 400,
+    "pages": 310
+  },
+  {
+    "title": "Atomic Habits",
+    "author": "James Clear",
+    "price": 600,
+    "pages": 320
+  },
+  {
+    "title": "The Alchemist",
+    "author": "Paulo Coelho",
+    "price": 350,
+    "pages": 208
+  },
+  {
+    "title": "Rich Dad Poor Dad",
+    "author": "Robert Kiyosaki",
+    "price": 450,
+    "pages": 336
+  },
+  {
+    "title": "Wings of Fire",
+    "author": "A.P.J. Abdul Kalam",
+    "price": 300,
+    "pages": 180
+  },
+  {
+    "title": "The Great Gatsby",
+    "author": "F. Scott Fitzgerald",
+    "price": 550,
+    "pages": 218
+  },
+  {
+    "title": "To Kill a Mockingbird",
+    "author": "Harper Lee",
+    "price": 700,
+    "pages": 380
+  },
+  {
+    "title": "1984",
+    "author": "George Orwell",
+    "price": 250,
+    "pages": 328
+  },
+  {
+    "title": "The Psychology of Money",
+    "author": "Morgan Housel",
+    "price": 650,
+    "pages": 256
+  },
+  {
+    "title": "Think and Grow Rich",
+    "author": "Napoleon Hill",
+    "price": 500,
+    "pages": 320
+  },
+  {
+    "title": "Deep Work",
+    "author": "Cal Newport",
+    "price": 480,
+    "pages": 296
+  },
+  {
+    "title": "Clean Code",
+    "author": "Robert C. Martin",
+    "price": 800,
+    "pages": 464
+  },
+  {
+    "title": "The Pragmatic Programmer",
+    "author": "Andrew Hunt",
+    "price": 750,
+    "pages": 352
+  },
+  {
+    "title": "Ikigai",
+    "author": "Hector Garcia",
+    "price": 320,
+    "pages": 208
+  }
+]
