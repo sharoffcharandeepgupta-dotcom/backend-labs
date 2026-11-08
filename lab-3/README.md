@@ -13,19 +13,19 @@
 
 | Field               | Details           |
 | ------------------- | ----------------- |
-| Name                | Shanmuk Shahith   |
-| Registration Number | 252U1R9137        |
+| Name                | Charandeep Gupta   |
+| Registration Number | 252U1R9146        |
 | Section             | CSE - GEN-AI - 2C |
 
 ## Live Deployment
 
 The application is currently tested locally using Postman.
 
-Local Application URL:
+## Live Deployment
 
-```text
-http://localhost:3000/
-```
+The RESTful Book Management API is deployed on Render.
+
+**Live API URL:** [https://backend-lab-3-ziaw.onrender.com](https://backend-lab-3-ziaw.onrender.com)
 
 ## Project Objective
 
