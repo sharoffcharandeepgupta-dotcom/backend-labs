@@ -1,0 +1,237 @@
+{
+  "info": {
+    "_postman_id": "80dc2dbf-6f92-4e51-9b0a-a57071877c5e",
+    "name": "GameZone Arcade API",
+    "description": "Requests for gamer, console, smart search, and booking endpoints. Run against a local server with the baseUrl variable set to http://localhost:3000.",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "variable": [
+    { "key": "baseUrl", "value": "http://localhost:3000" },
+    { "key": "gamerId", "value": "1" },
+    { "key": "consoleId", "value": "1" },
+    { "key": "createdConsoleId", "value": "" },
+    { "key": "bookingId", "value": "1" }
+  ],
+  "item": [
+    {
+      "name": "Gamers",
+      "item": [
+        {
+          "name": "Get all gamers",
+          "request": { "method": "GET", "url": "{{baseUrl}}/gamers/" }
+        },
+        {
+          "name": "Get one gamer",
+          "request": { "method": "GET", "url": "{{baseUrl}}/gamers/{{gamerId}}" }
+        },
+        {
+          "name": "Add gamer",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "if (pm.response.code === 201) {",
+                  "  pm.collectionVariables.set('gamerId', pm.response.json().gamer.id);",
+                  "}"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "POST",
+            "header": [{ "key": "Content-Type", "value": "application/json" }],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"Taylor Nguyen\",\n  \"email\": \"taylor.nguyen@example.com\"\n}",
+              "options": { "raw": { "language": "json" } }
+            },
+            "url": "{{baseUrl}}/gamers/"
+          }
+        },
+        {
+          "name": "Reject missing gamer fields",
+          "request": {
+            "method": "POST",
+            "header": [{ "key": "Content-Type", "value": "application/json" }],
+            "body": { "mode": "raw", "raw": "{\"name\":\"\"}", "options": { "raw": { "language": "json" } } },
+            "url": "{{baseUrl}}/gamers/"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Consoles",
+      "item": [
+        {
+          "name": "Get all consoles",
+          "request": { "method": "GET", "url": "{{baseUrl}}/consoles/" }
+        },
+        {
+          "name": "Get one console",
+          "request": { "method": "GET", "url": "{{baseUrl}}/consoles/{{consoleId}}" }
+        },
+        {
+          "name": "Add console",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "if (pm.response.code === 201) {",
+                  "  pm.collectionVariables.set('createdConsoleId', pm.response.json().console.id);",
+                  "}"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "POST",
+            "header": [{ "key": "Content-Type", "value": "application/json" }],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"Nintendo Switch\",\n  \"platform\": \"Nintendo\"\n}",
+              "options": { "raw": { "language": "json" } }
+            },
+            "url": "{{baseUrl}}/consoles/"
+          }
+        },
+        {
+          "name": "Update created console",
+          "request": {
+            "method": "PUT",
+            "header": [{ "key": "Content-Type", "value": "application/json" }],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"Nintendo Switch OLED\",\n  \"platform\": \"Nintendo\"\n}",
+              "options": { "raw": { "language": "json" } }
+            },
+            "url": "{{baseUrl}}/consoles/{{createdConsoleId}}"
+          }
+        },
+        {
+          "name": "Search consoles",
+          "request": { "method": "GET", "url": "{{baseUrl}}/consoles/?q=PlayStation" }
+        },
+        {
+          "name": "Search with no matches",
+          "request": { "method": "GET", "url": "{{baseUrl}}/consoles/?q=no-such-console" }
+        },
+        {
+          "name": "Reject missing console fields",
+          "request": {
+            "method": "POST",
+            "header": [{ "key": "Content-Type", "value": "application/json" }],
+            "body": { "mode": "raw", "raw": "{\"name\":\"PlayStation 5\"}", "options": { "raw": { "language": "json" } } },
+            "url": "{{baseUrl}}/consoles/"
+          }
+        },
+        {
+          "name": "Delete created console",
+          "request": { "method": "DELETE", "url": "{{baseUrl}}/consoles/{{createdConsoleId}}" }
+        }
+      ]
+    },
+    {
+      "name": "Bookings",
+      "item": [
+        {
+          "name": "Get all bookings",
+          "request": { "method": "GET", "url": "{{baseUrl}}/bookings/" }
+        },
+        {
+          "name": "Get one booking",
+          "request": { "method": "GET", "url": "{{baseUrl}}/bookings/{{bookingId}}" }
+        },
+        {
+          "name": "Create booking",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "if (pm.response.code === 201) {",
+                  "  pm.collectionVariables.set('bookingId', pm.response.json().booking.id);",
+                  "}"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "POST",
+            "header": [{ "key": "Content-Type", "value": "application/json" }],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"gamer_id\": 1,\n  \"console_id\": 1,\n  \"booking_date\": \"2026-12-01\",\n  \"status\": \"Confirmed\"\n}",
+              "options": { "raw": { "language": "json" } }
+            },
+            "url": "{{baseUrl}}/bookings/"
+          }
+        },
+        {
+          "name": "Booking details with JOIN",
+          "request": { "method": "GET", "url": "{{baseUrl}}/bookings/details/" }
+        },
+        {
+          "name": "Reject invalid gamer ID",
+          "request": {
+            "method": "POST",
+            "header": [{ "key": "Content-Type", "value": "application/json" }],
+            "body": {
+              "mode": "raw",
+              "raw": "{\"gamer_id\":999999,\"console_id\":1,\"booking_date\":\"2026-12-01\",\"status\":\"Confirmed\"}",
+              "options": { "raw": { "language": "json" } }
+            },
+            "url": "{{baseUrl}}/bookings/"
+          }
+        },
+        {
+          "name": "Reject invalid console ID",
+          "request": {
+            "method": "POST",
+            "header": [{ "key": "Content-Type", "value": "application/json" }],
+            "body": {
+              "mode": "raw",
+              "raw": "{\"gamer_id\":1,\"console_id\":999999,\"booking_date\":\"2026-12-01\",\"status\":\"Confirmed\"}",
+              "options": { "raw": { "language": "json" } }
+            },
+            "url": "{{baseUrl}}/bookings/"
+          }
+        },
+        {
+          "name": "Reject invalid booking date",
+          "request": {
+            "method": "POST",
+            "header": [{ "key": "Content-Type", "value": "application/json" }],
+            "body": {
+              "mode": "raw",
+              "raw": "{\"gamer_id\":1,\"console_id\":1,\"booking_date\":\"2025-02-30\",\"status\":\"Confirmed\"}",
+              "options": { "raw": { "language": "json" } }
+            },
+            "url": "{{baseUrl}}/bookings/"
+          }
+        },
+        {
+          "name": "Reject missing booking status",
+          "request": {
+            "method": "POST",
+            "header": [{ "key": "Content-Type", "value": "application/json" }],
+            "body": {
+              "mode": "raw",
+              "raw": "{\"gamer_id\":1,\"console_id\":1,\"booking_date\":\"2026-12-01\",\"status\":\"\"}",
+              "options": { "raw": { "language": "json" } }
+            },
+            "url": "{{baseUrl}}/bookings/"
+          }
+        },
+        {
+          "name": "Booking not found",
+          "request": { "method": "GET", "url": "{{baseUrl}}/bookings/999999" }
+        }
+      ]
+    }
+  ]
+}
