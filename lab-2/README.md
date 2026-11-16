@@ -18,9 +18,9 @@
 | Section             | CSE - GEN-AI - 2C |
 
 Live Deployment
-Deployment Link: 
+Deployment Link: https://backend-labs-nine.vercel.app/
 
-The application is deployed on Render and can be accessed through the public URL above.
+The application is deployed on Vercel and can be accessed through the public URL above.
 
 ## Project Objective
 
