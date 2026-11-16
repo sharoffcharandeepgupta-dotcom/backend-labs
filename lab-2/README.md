@@ -17,6 +17,11 @@
 | Registration Number | 252U1R9146        |
 | Section             | CSE - GEN-AI - 2C |
 
+Live Deployment
+Deployment Link: 
+
+The application is deployed on Render and can be accessed through the public URL above.
+
 ## Project Objective
 
 The objective of this lab is to connect an Express.js application with an SQLite database and implement CRUD (Create, Read, Update, Delete) operations through HTTP API endpoints.
